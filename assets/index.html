@@ -13,35 +13,36 @@
     <title>testes</title>
 </head>
 <body>
-    <div class="container">
-        <article>
-            <h1>Acerte o número!</h1>
+    <main class="container">
+        <article class="titulo-container">
+            <h1>guess number</h1>
             <p>entre 0 a 100</p>
         </article>
 
-        <section>
+        <section class="input-container">
             <h4>insira o número aqui</h4>
 
-            <div class="numero">
-                <input type="text" name="number" class="inputNumber">
+            <div class="input-numero-container">
+                <input type="text" name="number" class="input-number" maxlength="3">
                 <button onclick="consequencia()" class="verificar">Verificar</button>
             </div>
         </section>
 
-        <section class="numerosDados">
-
-            <input type="checkbox" name="dica"  id="dica" hidden>
-            <label class="dica" for="dica">
+        <section class="dica-container">
+            <input type="checkbox" name="dica" id="dica-checkbox" hidden>
+            <label class="dica" for="dica-checkbox">
                 <div class="square"></div>
                 <div class="circle"></div>
             </label>
-            <h3 class="dicaPalavra">gegwgeg</h3>
 
+            <h3 class="dica-palavra">O número é maior!</h3>
+        </section>
+
+        <section class="numeros-digitados">
             <h4>Números digitados:</h4>
 
             <p class="res"></p>
-
         </section>
-    </div>
+    </main>
 </body>
 </html>

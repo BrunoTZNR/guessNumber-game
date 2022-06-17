@@ -3,10 +3,10 @@ const numAleatorio = Math.floor(Math.random() * (100 + 1));
 console.log(numAleatorio);
 
 function consequencia(){
-    const checkbox = document.querySelector('#dica').checked;
-    const dica = document.querySelector('.dicaPalavra');
+    const checkbox = document.querySelector('#dica-checkbox').checked;
+    const dica = document.querySelector('.dica-palavra');
     const res = document.querySelector('.res');
-    const input = document.querySelector('.inputNumber').value;
+    const input = document.querySelector('.input-number').value;
     console.log(input);
 
     if(checkbox == true){
