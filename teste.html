@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="index.js" async></script>
+    <script src="https://kit.fontawesome.com/ab587c5cd2.js" crossorigin="anonymous"></script>
+
+    <title>testes</title>
+</head>
+<body>
+    <div class="container">
+        <article>
+            <h1>Acerte o número!</h1>
+            <p>entre 0 a 100</p>
+        </article>
+
+        <section>
+            <h4>insira o número aqui</h4>
+
+            <div class="numero">
+                <input type="text" name="number" class="inputNumber">
+                <button onclick="consequencia()" class="verificar">Verificar</button>
+            </div>
+        </section>
+
+        <section class="numerosDados">
+
+            <input type="checkbox" name="dica"  id="dica" hidden>
+            <label class="dica" for="dica">
+                <div class="square"></div>
+                <div class="circle"></div>
+            </label>
+            <h3 class="dicaPalavra">gegwgeg</h3>
+
+            <h4>Números digitados:</h4>
+
+            <p class="res"></p>
+
+        </section>
+    </div>
+</body>
+</html>
