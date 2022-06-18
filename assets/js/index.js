@@ -14,7 +14,7 @@ const respostas = () => {
 const music = () => {
     const audio = document.querySelector('.audio');
     var numale2 = Math.floor(Math.random() * (10 - 1) + 1);
-    var mp3 = `./audios/${numale2}.mp3`;
+    var mp3 = `./assets/audios/${numale2}.mp3`;
     console.log(mp3);
     audio.setAttribute('src', mp3);
     audio.play();
