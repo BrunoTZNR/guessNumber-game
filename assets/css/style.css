@@ -152,4 +152,5 @@ section.numeros-digitados p.res{
     max-width: 380px;
     min-height: 21px;
     text-align: center;
+    color: var(--color-text);
 }
