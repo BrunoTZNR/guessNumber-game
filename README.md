@@ -2,7 +2,7 @@
 
 ### Project
 
-<p>Play <strong>-></strong> <a href="https://brunotznr.github.io/guessNumber-game/"><strong>Guess Number Game - Vai dar namoro EDITION</strong></a></p>
+<p>Play <strong>-></strong> <a href="https://brunotznr.github.io/guessNumber-game/" target="_blank"><strong>Guess Number Game - Vai dar namoro EDITION</strong></a></p>
 
 ### Technologies
 
