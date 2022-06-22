@@ -1,13 +1,13 @@
 const numAleatorio = Math.floor(Math.random() * (100 + 1)); //gera o número a ser adivinhado
-console.log(numAleatorio);
+// console.log(numAleatorio);
 
 var numeros = [];
 var tentativas = 0;
 
-//teste
+//imprime o numeros já digitados
 const respostas = () => {
-    console.log(numeros);
-    console.log(tentativas);
+    const res = document.querySelector('.res');
+    res.innerHTML = numeros.join('-');
 }
 
 //tocar um audio aleatorio de 1 a 10
@@ -26,29 +26,35 @@ const consequencia = () => {
     const res = document.querySelector('.res');
     const input = document.querySelector('.input-number').value;
 
-    if(checkbox == true){
-        if(+input == numAleatorio){
-            music(); //tocar a musica caso ganhar
-        }else if(+input < numAleatorio){
-            dica.innerHTML = "O número é maior!";
-            res.innerHTML += " " + input;
-        }else if(+input > numAleatorio){
-            dica.innerHTML = "O número é menor!";
-            res.innerHTML += " " + input;
-        }
+    if(+input > 100 || +input < 0){
+        res.innerHTML = "Digite um valor entre 0 e 100!";
+        document.querySelector('.input-number').value = "";
+        document.querySelector('.input-number').focus();
     }else{
-        if(+input === numAleatorio){
-            music();
+        if(checkbox == true){
+            if(+input == numAleatorio){
+                music(); //tocar a musica caso ganhar
+            }else if(+input < numAleatorio){
+                dica.innerHTML = "O número é maior!";
+                numeros.push(input);
+                respostas();
+            }else if(+input > numAleatorio){
+                dica.innerHTML = "O número é menor!";
+                numeros.push(input);
+                respostas();
+            }
         }else{
-            res.innerHTML += " " + input;
+            if(+input === numAleatorio){
+                music();
+            }else{
+                numeros.push(input);
+                respostas();
+            }
         }
+        document.querySelector('.input-number').value = "";
+        document.querySelector('.input-number').focus();
+        tentativas += 1;
     }
-    document.querySelector('.input-number').value = "";
-    document.querySelector('.input-number').focus();
-    tentativas += 1;
-    numeros.push(input);
-
-    respostas(); //teste
 }
 
 //dispara consequencia apertando enter ao inves de clickar no botao
