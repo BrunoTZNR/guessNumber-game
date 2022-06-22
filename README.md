@@ -1,5 +1,9 @@
 # Guess Number Game - Vai dar namoro Edition
 
+### Project
+
+<p>Play <strong>-></strong> <a href="https://brunotznr.github.io/guessNumber-game/"><strong>Guess Number Game - Vai dar namoro EDITION</strong></a></p>
+
 ### Technologies
 
 <p>HTML5, CSS3 e Vanilla Javascript.</p>
