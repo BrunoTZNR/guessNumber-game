@@ -26,7 +26,7 @@ body{
 
 main.container{
     width: 450px;
-    height: 500px;
+    height: 800px;
     background: var(--back-main);
     border-radius: 1.25rem;
     padding: 2rem 0;
@@ -72,6 +72,11 @@ div.input-numero-container input[type="text"]{
     font-weight: bold;
 }
 
+div.input-numero-container input[type="text"]:disabled{
+    background-color: var(--color-middle);
+    color: var(--color-text);
+}
+
 div.input-numero-container button.verificar{
     width: 80px;
     padding: .65rem 0;
@@ -91,12 +96,30 @@ div.input-numero-container button.verificar:hover{
     box-shadow: 4px 6px 6px #24222c86;
 }
 
+div.input-numero-container button.verificar:disabled{
+    outline: 1px solid var(--color-middle);
+    background: var(--color-middle);
+    color: var(--color-text);
+    box-shadow: none;
+    cursor: auto;
+}
+
 /* dica-container */
 
 section.dica-container{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+section.dica-container p.dica-sinal{
+    margin-bottom: .3rem;
+    color: var(--color-text);
+    font-weight: bold;
+}
+
+.corzinha{
+    text-shadow: 0px 0px 5px var(--color-text);
 }
 
 section.dica-container label.dica{
@@ -153,4 +176,38 @@ section.numeros-digitados p.res{
     min-height: 21px;
     text-align: center;
     color: var(--color-text);
+    margin-bottom: 1rem;
+}
+
+table.tabela{
+    display: flex;
+}
+
+table.tabela tr{
+    /* outline: 1px solid #008000; */
+    display: flex;
+    column-gap: 6px;
+    margin-bottom: 6px;
+}
+
+table.tabela td{
+    /* outline: 1px solid #217dff; */
+    width: 33px;
+    height: 33px;
+    font-weight: bold;
+    color: var(--back-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-middle);
+}
+
+table.tabela td.acerto{
+    color: var(--color-text);
+    background: var(--back-main-strong);
+}
+
+table.tabela td.acertado{
+    color: red;
+    background: green;
 }
