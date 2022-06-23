@@ -18,7 +18,7 @@ programa ”Vai dar namoro!” do Rodrigo Faro, que faz quase sempre quando esto
 ### Design
 
 <figure style="display: flex;">
-  <img src="./assets/img/NumberGuess-design03.png" alt="Design 03"/>
+  <img src="./assets/img/NumberGuess-design04.png" alt="Design 03"/>
 </figure>
 
 ### EM CONSTRUÇÃO...
