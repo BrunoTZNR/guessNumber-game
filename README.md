@@ -1,5 +1,9 @@
 # Guess Number Game - Vai dar namoro Edition
 
+### Project
+
+<p>Play <strong>-></strong> <a href="https://brunotznr.github.io/guessNumber-game/" target="_blank"><strong>Guess Number Game - Vai dar namoro EDITION</strong></a></p>
+
 ### Technologies
 
 <p>HTML5, CSS3 e Vanilla Javascript.</p>
@@ -13,5 +17,8 @@ programa ”Vai dar namoro!” do Rodrigo Faro, que faz quase sempre quando esto
 
 ### Design
 
-<img src="./assets/img/NumberGuess-Design01.png" alt="Design 1">
-<img src="./assets/img/NumberGuess-Design02.png" alt="Design 2">
+<figure style="display: flex;">
+  <img src="./assets/img/NumberGuess-design03.png" alt="Design 03"/>
+</figure>
+
+### EM CONSTRUÇÃO...
