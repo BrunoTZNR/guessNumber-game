@@ -1,35 +1,40 @@
 const numAleatorio = Math.floor(Math.random() * (100 - 1) + 1); //gera o número a ser adivinhado
 console.log(numAleatorio);
 
-var j = 0;
 var numeros = 0;
 var tentativas = 0;
 
-//limpar input
+//limpa o input
 const limpa = () => {
     document.querySelector('.input-number').value = "";
     document.querySelector('.input-number').focus();
 }
 
-//imprime o numeros já digitados
+//imprime qtd tentativas/o numeros já digitados
 const respostas = () => {
     var teste = `#td${numeros}`;
-    var tabela=document.querySelector(teste);
+    var tabela = document.querySelector(teste);
     
-    if(j===1){
+    //muda a cor do numAleatorio
+    if(numeros == numAleatorio){
         tabela.classList.add('acertado');
     }else{
         tabela.classList.add('acerto');
     }
+
+    //tentativas
+
 }
 
-//tocar um audio aleatorio de 1 a 10
+//toca um audio aleatorio de 1 a 10
 const music = () => {
     const audio = document.querySelector('.audio');
-    var numale2 = Math.floor(Math.random() * (10 - 1) + 1);
-    var mp3 = `./assets/audios/${numale2}.mp3`;
+    let numale2 = Math.floor(Math.random() * (10 - 1) + 1);
+    let mp3 = `./assets/audios/${numale2}.mp3`;
+
     console.log(mp3);
     audio.setAttribute('src', mp3);
+    audio.volume = 0.2;
     audio.play();
 }
 
@@ -37,10 +42,14 @@ const consequencia = () => {
     const checkbox = document.querySelector('#dica-checkbox');
     const res = document.querySelector('.res');
     const dica = document.querySelector('.dica-palavra');
-    const input = document.querySelector('.input-number').value;
+    const input = Number(document.querySelector('.input-number').value);
 
-    if(+input > 100 || +input < 0 || input == 0){
+    res.innerHTML = "";
+
+    if(input > 100 || input < 0 || input == 0){
         res.innerHTML = "Digite um valor entre 1 e 100!";
+
+        limpa();
     }else{
         if(checkbox.checked == true){
             document.querySelector('.dica-sinal').classList.add('corzinha');
@@ -48,12 +57,8 @@ const consequencia = () => {
 
             if(+input < numAleatorio){
                 dica.innerHTML = "O número é maior!";
-                numeros=input;
-                // respostas();
             }else if(+input > numAleatorio){
                 dica.innerHTML = "O número é menor!";
-                numeros=input;
-                // respostas();
             }
         }
 
@@ -61,17 +66,15 @@ const consequencia = () => {
             document.querySelector('.input-number').disabled = true;
             document.querySelector('.verificar').disabled = true;
 
-            numeros=input;
             j=1;
 
             checkbox.disabled = true;
 
             music();
         }else{
-            numeros=input;
-
             limpa();
         }
+        numeros=input;
         tentativas += 1;
         respostas();
     }
