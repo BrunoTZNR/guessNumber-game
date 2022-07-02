@@ -25,8 +25,6 @@ body{
 }
 
 main.container{
-    width: 450px;
-    height: 800px;
     background: var(--back-main);
     border-radius: 1.25rem;
     padding: 2rem 0;
@@ -35,6 +33,7 @@ main.container{
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
+    row-gap: 1.75rem;
 }
 
 main.container div.container1{
@@ -142,6 +141,10 @@ section.dica-container p.dica-sinal{
     text-shadow: 0px 0px 5px var(--color-text);
 }
 
+.oculto{
+    display: none !important;
+}
+
 section.dica-container label.dica{
     cursor: pointer;
     position: relative;
@@ -189,6 +192,22 @@ section.dica-container h3.dica-palavra{
     min-height: 21px;
 }
 
+/* tentativas */
+
+section.tentativas-container{
+    display: flex;
+    column-gap: .75rem;
+}
+
+section.tentativas-container h4{
+    color: var(--color-text);
+    text-transform: uppercase;
+}
+
+section.tentativas-container p.tentativas-contagem{
+    color: var(--color-text);
+}
+
 /* numeros-digitdos */
 section.numeros-digitados{
     display: flex;
@@ -209,14 +228,12 @@ table.tabela{
 }
 
 table.tabela tr{
-    /* outline: 1px solid #008000; */
     display: flex;
     column-gap: 6px;
     margin-bottom: 6px;
 }
 
 table.tabela td{
-    /* outline: 1px solid #217dff; */
     width: 33px;
     height: 33px;
     font-weight: bold;
@@ -241,8 +258,6 @@ table.tabela td.acertado{
 /* responsividade */
 @media only screen and (max-height: 900px) {
     main.container{
-        width: auto;
-        height: auto;
         padding: 2rem 2rem;
         flex-direction: row;
     }

@@ -1,8 +1,9 @@
 const numAleatorio = Math.floor(Math.random() * (100 - 1) + 1); //gera o número a ser adivinhado
 console.log(numAleatorio);
 
-var numeros = 0;
-var tentativas = 0;
+let numeros = 0;
+let tentativas = 0;
+var array_numeros = [];
 
 //limpa o input
 const limpa = () => {
@@ -23,7 +24,13 @@ const respostas = () => {
     }
 
     //tentativas
+    const tentativa_container = document.querySelector('.tentativas-container');
+    const contagem = document.querySelector('.tentativas-contagem');
 
+    tentativa_container.classList.remove('oculto');
+    contagem.innerHTML = `${tentativas}`;
+
+    console.log(array_numeros);
 }
 
 //toca um audio aleatorio de 1 a 10
@@ -76,6 +83,7 @@ const consequencia = () => {
         }
         numeros=input;
         tentativas += 1;
+        array_numeros.push(+input);
         respostas();
     }
 }
