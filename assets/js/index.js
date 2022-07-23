@@ -18,8 +18,16 @@ const respostas = () => {
     
     //muda a cor do numAleatorio
     if(numeros == numAleatorio){
+        //number aleatorio 4 a 11
+        let numalesim = Math.floor(Math.random() * (11 - 3) + 4);
+        music(alex=numalesim);
+
         tabela.classList.add('acertado');
     }else{
+        //number aleatorio 1 a 3
+        let numalenao = Math.floor(Math.random() * (4 - 1) + 1);
+        music(alex=numalenao);
+
         tabela.classList.add('acerto');
     }
 
@@ -30,17 +38,20 @@ const respostas = () => {
     tentativa_container.classList.remove('oculto');
     contagem.innerHTML = `${tentativas}`;
 
-    console.log(array_numeros);
+    // console.log(array_numeros);
 }
 
 //toca um audio aleatorio de 1 a 10
-const music = () => {
+const music = (alex) => {
     const audio = document.querySelector('.audio');
-    let numale2 = Math.floor(Math.random() * (10 - 1) + 1);
-    let mp3 = `./assets/audios/${numale2}.mp3`;
 
-    console.log(mp3);
-    audio.setAttribute('src', mp3);
+    let musiquinha = alex;
+
+    console.log(musiquinha);
+
+    let tocar = `./assets/audios/${musiquinha}.mp3`;
+
+    audio.setAttribute('src', tocar);
     audio.volume = 0.2;
     audio.play();
 }
@@ -53,7 +64,7 @@ const consequencia = () => {
 
     res.innerHTML = "";
 
-    if(input > 100 || input < 0 || input == 0){
+    if(input > 100 || input < 0 || input == 0 || input == null){
         res.innerHTML = "Digite um valor entre 1 e 100!";
 
         limpa();
@@ -76,8 +87,6 @@ const consequencia = () => {
             j=1;
 
             checkbox.disabled = true;
-
-            music();
         }else{
             limpa();
         }
@@ -90,7 +99,9 @@ const consequencia = () => {
 
 //dispara consequencia apertando enter ao inves de clickar no botao
 addEventListener('keypress', function(e){
-    if(e.key==='Enter'){
+    const inputzada = document.querySelector('.verificar').disabled;
+    
+    if(e.key==='Enter' && inputzada == false){
         consequencia();
     }
 })
