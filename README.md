@@ -20,7 +20,7 @@ programa ”Vai dar namoro!” do Rodrigo Faro, que faz quase sempre quando esto
 
 <figure style="display: flex;">
   <img src="./assets/img/guessNumber1.png" alt="Design 01"/>
-  <img src="./assets/img/guessNumber3.png" alt="Design 02"/>
+  <img src="./assets/img/guessNumber2.png" alt="Design 02"/>
   <img src="./assets/img/guessNumber4.png" alt="Design 03"/>
   <img src="./assets/img/guessNumber3.png" alt="Design 04"/>
 </figure>
