@@ -12,9 +12,10 @@
 
 <p>Queria algum projeto onde pudesse me desafiar, vi em minha pasta um protótipo que tentei fazer a um tempo atras, 
 voltei com ele, mas com uma ideia de, digamos assim, deixar as coisas mais divertidas.</p>
+
 <p>Guess Number Game - Vai dar namoro Edition, tem a proposta de um jogo de adivinhação, 
 onde é gerado um número aleatório de 1 a 100, onde quando você acerta ou erra é emitido um efeito sonoro do 
-programa ”Vai dar namoro!” do Rodrigo Faro, que faz quase sempre quando estou testando tomo um susto.</p>
+programa ”Vai dar namoro!” do Rodrigo Faro, quando estou testando quase sempre tomo um susto.</p>
 
 ### Design
 
