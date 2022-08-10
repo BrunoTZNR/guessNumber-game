@@ -1,5 +1,5 @@
-const numAleatorio = Math.floor(Math.random() * (100 - 1) + 1); //gera o número a ser adivinhado
-console.log(numAleatorio);
+//gera o número a ser adivinhado
+const numAleatorio = Math.floor(Math.random() * (100 - 1) + 1);
 
 let numeros = 0;
 let tentativas = 0;
@@ -15,18 +15,18 @@ const limpa = () => {
 const respostas = () => {
     var teste = `#td${numeros}`;
     var tabela = document.querySelector(teste);
-    
+
     //muda a cor do numAleatorio
-    if(numeros == numAleatorio){
+    if (numeros == numAleatorio) {
         //number aleatorio 4 a 11
         let numalesim = Math.floor(Math.random() * (11 - 3) + 4);
-        music(alex=numalesim);
+        music(alex = numalesim);
 
         tabela.classList.add('acertado');
-    }else{
+    } else {
         //number aleatorio 1 a 3
         let numalenao = Math.floor(Math.random() * (4 - 1) + 1);
-        music(alex=numalenao);
+        music(alex = numalenao);
 
         tabela.classList.add('acerto');
     }
@@ -37,8 +37,6 @@ const respostas = () => {
 
     tentativa_container.classList.remove('oculto');
     contagem.innerHTML = `${tentativas}`;
-
-    // console.log(array_numeros);
 }
 
 //toca um audio aleatorio de 1 a 10
@@ -64,44 +62,44 @@ const consequencia = () => {
 
     res.innerHTML = "";
 
-    if(input > 100 || input < 0 || input == 0 || input == null){
+    if (input > 100 || input < 0 || input == 0 || input == null) {
         res.innerHTML = "Digite um valor entre 1 e 100!";
 
         limpa();
-    }else{
-        if(checkbox.checked == true){
+    } else {
+        if (checkbox.checked == true) {
             document.querySelector('.dica-sinal').classList.add('corzinha');
             checkbox.disabled = true;
 
-            if(+input < numAleatorio){
+            if (+input < numAleatorio) {
                 dica.innerHTML = "O número é maior!";
-            }else if(+input > numAleatorio){
+            } else if (+input > numAleatorio) {
                 dica.innerHTML = "O número é menor!";
             }
         }
 
-        if(+input === numAleatorio){
+        if (+input === numAleatorio) {
             document.querySelector('.input-number').disabled = true;
             document.querySelector('.verificar').disabled = true;
 
-            j=1;
+            j = 1;
 
             checkbox.disabled = true;
-        }else{
+        } else {
             limpa();
         }
-        numeros=input;
+        numeros = input;
         tentativas += 1;
-        array_numeros.push(+input);
+        array_numeros.push(input);
         respostas();
     }
 }
 
 //dispara consequencia apertando enter ao inves de clickar no botao
-addEventListener('keypress', function(e){
+addEventListener('keypress', function (e) {
     const inputzada = document.querySelector('.verificar').disabled;
-    
-    if(e.key==='Enter' && inputzada == false){
+
+    if (e.key === 'Enter' && inputzada == false) {
         consequencia();
     }
 })

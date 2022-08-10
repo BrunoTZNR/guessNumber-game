@@ -9,6 +9,7 @@
 <p>HTML5, CSS3 e Vanilla Javascript.</p>
 
 ### Conception
+
 <p>Queria algum projeto onde pudesse me desafiar, vi em minha pasta um protótipo que tentei fazer a um tempo atras, 
 voltei com ele, mas com uma ideia de, digamos assim, deixar as coisas mais divertidas.</p>
 <p>Guess Number Game - Vai dar namoro Edition, tem a proposta de um jogo de adivinhação, 
@@ -18,7 +19,10 @@ programa ”Vai dar namoro!” do Rodrigo Faro, que faz quase sempre quando esto
 ### Design
 
 <figure style="display: flex;">
-  <img src="./assets/img/NumberGuess-design04.png" alt="Design 03"/>
+  <img src="./assets/img/guessNumber1.png" alt="Design 01"/>
+  <img src="./assets/img/guessNumber3.png" alt="Design 02"/>
+  <img src="./assets/img/guessNumber4.png" alt="Design 03"/>
+  <img src="./assets/img/guessNumber3.png" alt="Design 04"/>
 </figure>
 
 ### EM CONSTRUÇÃO...
